@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Mark your task as completed:</h1>
+<form method="post">
+    {{ form.as_p }}
+    <input type="submit" value="Mark">
+</form>
+
+{% endblock content %}
+

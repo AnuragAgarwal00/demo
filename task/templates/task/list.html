@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Your Tasks:</h1>
+
+{% for task in object_list %}
+<h1>{{ task.title }}</h1>
+<p>Deadline: {{ task.deadline|date:"Y-m-d" }}</p>
+<p>Created_at: {{ task.created_at|date:"Y-m-d"  }}</p>
+{% empty %}
+<p>No task exists</p>
+{% endfor %}
+
+{% endblock content %}
+
